@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Jay Balce - Curriculum Vitae</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #3e314b 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+
+        /* Professional Summary */
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .degree {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .institution {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .gpa {
+            color: #555;
+            font-style: italic;
+        }
+
+        .coursework {
+            margin-top: 10px;
+        }
+
+        .coursework-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .coursework-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            margin-left: 20px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            border: 1px solid #e0e0e0;
+        }
+
+        .skill-tag.highlight {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .project-tech {
+            color: #667eea;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .project-highlights {
+            margin-left: 20px;
+        }
+
+        .project-highlights li {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .position {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .responsibilities {
+            margin-left: 20px;
+        }
+
+        .responsibilities li {
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Activities */
+        .activity-item {
+            margin-bottom: 20px;
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .activity-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .activity-org {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .activity-description {
+            color: #555;
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+
+        /* Certifications */
+        .cert-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f9f9f9;
+            border-left: 3px solid #667eea;
+        }
+
+        .cert-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .cert-issuer {
+            color: #667eea;
+            font-size: 0.95em;
+        }
+
+        .cert-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 3px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skills-grid,
+            .coursework-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .education-header,
+            .experience-header,
+            .project-header,
+            .activity-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>IAN JAY BALCE</h1>
+            <div class="title">Bachelor of Science in Information Systems | 3rd Year Student</div>
+            <div class="contact-info">
+                <span>📧 ianjaybalce17@gmail.com</span>
+                <span>📱 +63 910 9122 7272</span>
+                <span>📍 Vinzons, Camarines Norte</span>
+                <a href="#">🔗 linkedin.com/in/ianbalce</a>
+                <a href="#">💻 github.com/ianbalce</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+                <p class="summary">
+                    Passionate and driven 3rd-year BSIS student with strong expertise in frontend web development and a proven track record of building responsive, user-centric web applications. Proficient in modern web technologies including HTML5, CSS3, JavaScript, and React, with hands-on experience in creating dynamic and interactive interfaces. Known for creative problem-solving, attention to detail, and a continuous learning mindset. Eager to contribute technical skills and fresh perspectives to real-world IT projects while gaining valuable industry experience.
+                </p>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">EDUCATION</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="degree">Bachelor of Science in Information Systems</div>
+                        <div class="date">Expected Graduation: May 2026</div>
+                    </div>
+                    <div class="institution">University of Camarines Norte</div>
+                    <div class="gpa">Current GPA: 1.6 | Dean's List (2023, 2024)</div>
+                    <div class="coursework">
+                        <div class="coursework-title">Relevant Coursework:</div>
+                        <ul class="coursework-list">
+                            <li>Web Development & Design</li>
+                            <li>Database Management Systems</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Systems Analysis & Design</li>
+                            <li>Human-Computer Interaction</li>
+                            <li>Software Engineering</li>
+                            <li>Information Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag highlight">HTML5</span>
+                            <span class="skill-tag highlight">CSS3/SCSS</span>
+                            <span class="skill-tag highlight">JavaScript (ES6+)</span>
+                            <span class="skill-tag highlight">React.js</span>
+                            <span class="skill-tag highlight">Responsive Design</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">jQuery</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend & Database</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Chrome DevTools</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Team Collaboration</span>
+                            <span class="skill-tag">Creative Thinking</span>
+                            <span class="skill-tag">Time Management</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="section">
+                <h2 class="section-title">ACADEMIC & PERSONAL PROJECTS</h2>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-title">Website Development</div>
+                        <div class="project-tech">JavaScript • CSS Grid • Local Storage</div>
+                    </div>
+                    <p class="project-description">
+                        Developed a responsive e-commerce website with product listings, shopping cart functionality, and basic user authentication using JavaScript.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Built a mobile-friendly UI with HTML5 and CSS3, achieving a 95% responsiveness score.</li>
+                        <li>Implemented interactive features such as dynamic cart updates and form validation with vanilla JavaScript.</li>
+                        <li>Designed a clean, structured layout for improved user navigation and accessibility.</li>
+                        <li>Achieved 95% mobile responsiveness score and optimized loading time to under 2 seconds</li>
+                    </ul>
+                </div>
+    
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-title">Personal Portfolio Website</div>
+                        <div class="project-tech">HTML • CSS • JavaScript</div>
+                    </div>
+                    <p class="project-description">
+                        Built a modern, fully responsive portfolio website showcasing projects, skills, and professional experience.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Designed with mobile-first approach ensuring seamless experience across all devices</li>
+                        <li>Implemented smooth scrolling, animations, and interactive elements using vanilla JavaScript</li>
+                        <li>Optimized for SEO and web performance with 95+ Lighthouse score</li>
+                        <li>Integrated contact form with backend validation and email functionality</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h2 class="section-title">EXPERIENCE</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="position">Web Development Intern</div>
+                        <div class="date">June 2024 - August 2024</div>
+                    </div>
+                    <div class="company">TechStart Solutions Inc., Manila</div>
+                    <ul class="responsibilities">
+                        <li>Collaborated with development team to build and maintain client websites using HTML, CSS, and JavaScript</li>
+                        <li>Assisted in implementing responsive designs and ensuring cross-browser compatibility</li>
+                        <li>Participated in code reviews and learned industry best practices for clean, maintainable code</li>
+                        <li>Fixed bugs and improved UI/UX based on client feedback and user testing results</li>
+                        <li>Contributed to documentation and created technical guides for internal processes</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="position">Freelance Web Developer</div>
+                        <div class="date">January 2024 - Present</div>
+                    </div>
+                    <div class="company">Self-Employed</div>
+                    <ul class="responsibilities">
+                        <li>Designed and developed custom websites for local businesses and student organizations</li>
+                        <li>Consulted with clients to understand requirements and delivered tailored solutions</li>
+                        <li>Provided ongoing maintenance and support for deployed websites</li>
+                        <li>Managed multiple projects simultaneously while meeting deadlines and quality standards</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Leadership & Activities -->
+            <div class="section">
+                <h2 class="section-title">LEADERSHIP & ACTIVITIES</h2>
+                
+                <div class="activity-item">
+                    <div class="activity-header">
+                        <div class="activity-title">Vice President, IT Student Council</div>
+                        <div class="date">August 2024 - Present</div>
+                    </div>
+                    <div class="activity-org">University of Technology</div>
+                    <ul class="activity-description">
+                        <li>Led team of 15 students in organizing tech workshops, coding competitions, and industry talks</li>
+                        <li>Coordinated with faculty and industry partners for mentorship and internship opportunities</li>
+                        <li>Managed student council website and social media presence, increasing engagement by 40%</li>
+                    </ul>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-header">
+                        <div class="activity-title">Web Development Workshop Facilitator</div>
+                        <div class="date">March 2024</div>
+                    </div>
+                    <div class="activity-org">University Tech Fest 2024</div>
+                    <ul class="activity-description">
+                        <li>Conducted 3-day workshop on responsive web design for 50+ students</li>
+                        <li>Created hands-on exercises and learning materials for beginner web developers</li>
+                        <li>Provided one-on-one mentoring and guidance on best practices</li>
+                    </ul>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-header">
+                        <div class="activity-title">Hackathon Participant</div>
+                        <div class="date">November 2023</div>
+                    </div>
+                    <div class="activity-org">National Coding Challenge 2023</div>
+                    <ul class="activity-description">
+                        <li>Collaborated with team to develop healthcare appointment booking system in 48 hours</li>
+                        <li>Secured 2nd place among 30+ teams from various universities nationwide</li>
+                        <li>Demonstrated rapid prototyping skills and ability to work under pressure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section">
+                <h2 class="section-title">CERTIFICATIONS</h2>
+                
+                <div class="cert-item">
+                    <div class="cert-title">Responsive Web Design Certification</div>
+                    <div class="cert-issuer">freeCodeCamp</div>
+                    <div class="cert-date">Issued: July 2024</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">JavaScript Algorithms and Data Structures</div>
+                    <div class="cert-issuer">freeCodeCamp</div>
+                    <div class="cert-date">Issued: May 2024</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Responsive Web Design Certification</div>
+                    <div class="cert-issuer">W3Schools</div>
+                    <div class="cert-date">Issued: March 2024</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Git & GitHub Masterclass</div>
+                    <div class="cert-issuer">Udemy</div>
+                    <div class="cert-date">Issued: January 2024</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
